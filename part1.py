@@ -1,11 +1,13 @@
-#step1: to analyse the saved image
+import pyqrcode as df
 
-import cv2
-import numpy as np
-import pyzbar.pyzbar as pyzbar
+qr = df.create('houston_system_private_ltd')
 
-img = cv2.imread("hello.png")
+qr.png('hello.png', scale=7)
 
-cv2.imshow("Image", img)
+qr.svg('s_v_g.svg')
 
-cv2.waitKey(0)
+qr.eps("e_p_s.eps")
+
+
+
+
